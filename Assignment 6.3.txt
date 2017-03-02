@@ -1,0 +1,42 @@
+Explain the working of below pig script commands with an example:
+
+1. LOAD:
+            It is used to load data from the file system.
+eg:
+Relation_name=LOAD 'input_file_path' USING function AS schema;
+----------------------------------------------------------------------------------------------------------------------------------------
+2. STORE:
+       It is used to store data in file system.
+ eg:
+STORE  Relation_name INTO Required_directory_path  USING function;
+--------------------------------------------------------------------------------------------------------------------------------------
+3. DUMP:
+      It is used to dump or display results on the screen.
+eg:
+DUMP relation_name;
+---------------------------------------------------------------------------------------------------------------------------------------
+4. FOREACH:
+It  generates  specified data transformations based on columns of data.
+eg:
+Relation_name2 = FOREACH Relation_name1 GENERATE (required data);
+---------------------------------------------------------------------------------------------------------------------------------------
+5. FILTER:
+It is used to select tuples from relation , based on some conditions
+eg:
+Relation_name2= FILTER Relation_name1 BY condition;
+----------------------------------------------------------------------------------------------------------------------------------------
+6. GROUP BY:
+         It is used to group a data in one or more relations.
+eg: 
+group_data=GROUP Relation_name BY expression;
+----------------------------------------------------------------------------------------------------------------------------------------
+7. ORDER BY:
+           It is used to display the contents of relation in sorted order on one or more fields.
+eg:
+Relation_name2=ORDER Relation_name1 BY (ASC|DESC);
+----------------------------------------------------------------------------------------------------------------------------------------
+8. DESCRIBE:
+         It is used to view the schema of a relation.
+eg:
+DESCRIBE relation_name;
+----------------------------------------------------------------------------------------------------------------------------------------
